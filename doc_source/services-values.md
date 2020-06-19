@@ -24,10 +24,10 @@ Enter a name that describes the instances that you will register using this serv
   *service\-name*\.*namespace\-name*
 
   When your application submits a DNS query to discover service instances, the query is for a record that includes the name of the service in the record name\.
-If you want AWS Cloud Map to create an SRV record when you register an instance, and if you're using a system that requires a specific SRV format, such as [HAProxy](http://www.haproxy.org/), specify the following for **Service name**:  
+If you want AWS Cloud Map to create an **SRV** record when you register an instance, and if you're using a system that requires a specific **SRV** format, such as [HAProxy](http://www.haproxy.org/), specify the following for **Service name**:  
 + Start the name with an underscore \(\_\), such as **\_exampleservice**
 + End the name with *\.\_protocol*, such as **\.\_tcp**
-When you register an instance, AWS Cloud Map creates an SRV record and assigns a name by concatenating the service name and the namespace name, for example:  
+When you register an instance, AWS Cloud Map creates an **SRV** record and assigns a name by concatenating the service name and the namespace name, for example:  
 **\_exampleservice\.\_tcp\.example\.com**
 
 **Service description**  
@@ -39,12 +39,12 @@ You can't use the console to configure AWS Cloud Map to create a Route 53 alias
 AWS Cloud Map supports the following Route 53 routing policies:    
 **Weighted routing**  
 Route 53 returns the applicable value from one randomly selected instance from among the instances that you registered using the same service\. All records have the same weight, so you can't route more or less traffic to any instances\.  
-For example, suppose the service includes configurations for one A record and a health check, and you use the service to register 10 instances\. Route 53 responds to DNS queries with the IP address for one randomly selected instance from among the healthy instances\. If no instances are healthy, Route 53 responds to DNS queries as if all the instances were healthy\.  
+For example, suppose the service includes configurations for one **A** record and a health check, and you use the service to register 10 instances\. Route 53 responds to DNS queries with the IP address for one randomly selected instance from among the healthy instances\. If no instances are healthy, Route 53 responds to DNS queries as if all the instances were healthy\.  
 If you don't define a health check for the service, Route 53 assumes that all instances are healthy and returns the applicable value for one randomly selected instance\.  
 For more information, see [Weighted Routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted) in the *Amazon Route 53 Developer Guide*\.  
 **Multivalue answer routing**  
 If you define a health check for the service and the health check is healthy, Route 53 returns the applicable value for up to eight instances\.  
-For example, suppose the service includes configurations for one A record and a health check, and you use the service to register 10 instances\. Route 53 responds to DNS queries with IP addresses for up to eight healthy instances\. If fewer than eight instances are healthy, Route 53 responds to every DNS query with the IP addresses for all the healthy instances\.  
+For example, suppose the service includes configurations for one **A** record and a health check, and you use the service to register 10 instances\. Route 53 responds to DNS queries with IP addresses for up to eight healthy instances\. If fewer than eight instances are healthy, Route 53 responds to every DNS query with the IP addresses for all the healthy instances\.  
 If you don't define a health check for the service, Route 53 assumes that all instances are healthy and returns the values for up to eight instances\.  
 For more information, see [Multivalue Answer Routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-multivalue) in the *Amazon Route 53 Developer Guide*\.
 
@@ -60,7 +60,7 @@ When you register an instance, you specify the domain name of the resource, such
 + If you want to choose **CNAME**, you must choose **Weighted routing** for **Routing policy**\. 
 + If you choose **CNAME**, you can't choose **Route 53 health check** for **Health check options**\.  
 **SRV**  
-The value for an SRV record uses the following values:  
+The value for an **SRV** record uses the following values:  
 `priority weight port service-hostname`  
 Note the following about the values:  
 + The values of `priority` and `weight` are both set to 1 and can't be changed\.
@@ -70,12 +70,12 @@ Note the following about the values:
   + The name of the service
   + The name of the namespace
 
-  For example, suppose you specify **test** for **Service instance ID** when you register an instance, and the name of the service is **backend** and the name of the namespace is **example\.com**\. AWS Cloud Map assigns the following value to the `service-hostname` attribute in the SRV record:
+  For example, suppose you specify **test** for **Service instance ID** when you register an instance, and the name of the service is **backend** and the name of the namespace is **example\.com**\. AWS Cloud Map assigns the following value to the `service-hostname` attribute in the **SRV** record:
 
   `test.backend.example.com`
-If you specify settings for an SRV record, note the following:  
-+ If you specify values for **IPv4 address**, **IPv6 address**, or both, AWS Cloud Map automatically creates A and/or AAAA records that have the same name as the value of `service-hostname` in the SRV record\.
-+ If you're using a system that requires a specific SRV format, such as HAProxy, see [](#service-creating-values-name) for information about how to specify the correct name format\. 
+If you specify settings for an **SRV** record, note the following:  
++ If you specify values for **IPv4 address**, **IPv6 address**, or both, AWS Cloud Map automatically creates **A** and/or **AAAA** records that have the same name as the value of `service-hostname` in the **SRV** record\.
++ If you're using a system that requires a specific **SRV** format, such as [HAProxy](http://www.haproxy.org/), see [service name](#service-creating-values-name) for information about how to specify the correct name format\.
 You can specify record types in the following combinations:   
 + **A**
 + **AAAA**
