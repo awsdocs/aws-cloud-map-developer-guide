@@ -31,7 +31,8 @@ The following example shows a permissions policy that grants a user permission t
             "route53:CreateHealthCheck",
             "route53:GetHealthCheck",
             "route53:DeleteHealthCheck",
-            "route53:UpdateHealthCheck"
+            "route53:UpdateHealthCheck",
+            "ec2:DescribeInstances"
          ],
          "Resource": "*"
       }
@@ -64,6 +65,7 @@ To grant full access to the AWS Cloud Map console, you grant the permissions in 
             "route53:GetHealthCheck",
             "route53:DeleteHealthCheck",
             "route53:UpdateHealthCheck",
+            "ec2:DescribeInstances",
             "ec2:DescribeVpcs",
             "ec2:DescribeRegions"
          ],

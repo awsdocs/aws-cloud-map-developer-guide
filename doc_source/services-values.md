@@ -28,7 +28,8 @@ If you want AWS Cloud Map to create an **SRV** record when you register an insta
 + Start the name with an underscore \(\_\), such as **\_exampleservice**
 + End the name with *\.\_protocol*, such as **\.\_tcp**
 When you register an instance, AWS Cloud Map creates an **SRV** record and assigns a name by concatenating the service name and the namespace name, for example:  
-**\_exampleservice\.\_tcp\.example\.com**
+**\_exampleservice\.\_tcp\.example\.com**  
+For services that are accessible by DNS queries, you cannot create multiple services with names that differ only by case \(such as EXAMPLE and example\)\. Otherwise, these services will have the same DNS name\. If you use a namespace that is only accessible by API calls, then you can create services that with names that differ only by case\.
 
 **Service description**  
 Enter a description for the service\. The value that you enter here appears on the **Services** page and on the detail page for each service\.

@@ -105,6 +105,7 @@ Required Permissions \(API Action\):
 + `route53:CreateHealthCheck`
 + `route53:UpdateHealthCheck`
 + `route53:ChangeResourceRecordSets`
++ `ec2:DescribeInstances`
 Resources: `*`
 
 [UpdateInstanceCustomHealthStatus](https://docs.aws.amazon.com/cloud-map/latest/api/API_UpdateInstanceCustomHealthStatus.html)  

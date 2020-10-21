@@ -7,10 +7,6 @@ AWS Cloud Map throttles `DiscoverInstances` API requests for each AWS account on
 
 If you exceed an API throttling quota, you get the `RequestLimitExceeded` error code\. For more information, see [Request rate limiting](#throttling-rate-based)\.
 
-**Topics**
-+ [How throttling is applied](#throttling-how)
-+ [Adjusting API throttling quotas](#throttling-increase)
-
 ## How throttling is applied<a name="throttling-how"></a>
 
 AWS Cloud Map uses the [token bucket algorithm](https://en.wikipedia.org/wiki/Token_bucket) to implement API throttling\. With this algorithm, your account has a *bucket* that holds a specific number of *tokens*\. The number of tokens in the bucket represents your throttling quota at any given second\.

@@ -15,3 +15,6 @@ To create a service, perform the following procedure\.<a name="creating-services
 1. On the **Create service** page, enter the applicable values\. For more information, see [Values That You Specify When You Create Services](services-values.md)\.
 
 1. Choose **Create service**\.
+
+**Note**  
+For services that are accessible by DNS queries, you cannot create multiple services with names that differ only by case \(such as EXAMPLE and example\)\. Otherwise, these services will have the same DNS name\. If you use a namespace that is only accessible by API calls, then you can create services that with names that differ only by case\.
