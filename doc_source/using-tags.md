@@ -26,7 +26,7 @@ If you're using AWS Identity and Access Management \(IAM\), you can control whic
 
 You can tag new or existing AWS Cloud Map namespaces and services\.\.
 
-If you're using the AWS Cloud Map API, the AWS CLI, or an AWS SDK, you can apply tags to new resources using the `tags` parameter on the relevant API action or to existing resources using the `TagResource` API action\. For more information, see [TagResource](https://docs.aws.amazon.com/cloud-map/latest/api/API_TagResource.html)\.
+If you're using the AWS Cloud Map API, the AWS CLI, or an AWS SDK, you can apply tags to new resources using the `tags` parameter on the relevant API action or to existing resources using the [TagResource](https://docs.aws.amazon.com/cloud-map/latest/api/API_TagResource.html) API action\. For more information, see [TagResource](https://docs.aws.amazon.com/cloud-map/latest/api/API_TagResource.html)\.
 
 Some resource\-creating actions enable you to specify tags for a resource when the resource is created\. If tags cannot be applied during resource creation, the resource creation process fails\. This ensures that resources you intended to tag on creation are either created with specified tags or not created at all\. If you tag resources at the time of creation, you don't need to run custom tagging scripts after resource creation\.
 

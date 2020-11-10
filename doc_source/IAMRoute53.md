@@ -10,5 +10,5 @@ For example, you can use IAM with AWS Cloud Map to control which users in your A
 
 For general information about IAM, see the following:
 + [Identity and Access Management in AWS Cloud Map](auth-and-access-control.md)
-+ [Identity and Access Management \(IAM\)](https://aws.amazon.com/iam/)
++ [Identity and Access Management \(IAM\)](http://aws.amazon.com/iam/)
 + [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/)

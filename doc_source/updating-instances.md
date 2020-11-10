@@ -18,7 +18,7 @@ You can update service instances in two ways, depending on which values you want
 
 1. Choose **Register service instance**\.
 
-1. On the **Register service instance** page, paste the ID that you copied in step 5 into **Service instance ID**\. 
+1. On the **Register service instance** page, paste the ID that you copied in step 5 into **Service instance ID**\.
 
 1. Enter all the other values that you want to apply to the service instance\. The previous values for the service instance are not retained\. For more information, see [Values That You Specify When You Register or Update Instances](instances-values.md)\.
 
@@ -38,6 +38,6 @@ You can update service instances in two ways, depending on which values you want
 
 1. In the **Custom attributes** section, choose **Edit**\.
 
-1. On the **Edit service instance: *instance\-name*** page, add, remove, or update custom attributes\. You can update both keys and values for existing attributes\. 
+1. On the **Edit service instance: *instance\-name*** page, add, remove, or update custom attributes\. You can update both keys and values for existing attributes\.
 
 1. Choose **Update service instance**\.

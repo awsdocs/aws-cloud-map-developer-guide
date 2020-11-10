@@ -19,7 +19,7 @@ For an ongoing record of events in your AWS account, including events for AWS Cl
 + [Configuring Amazon SNS Notifications for CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html)
 + [Receiving CloudTrail Log Files from Multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail Log Files from Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)
 
-Most AWS Cloud Map actions are logged by CloudTrail and are documented in the [AWS Cloud Map API Reference](https://docs.aws.amazon.com/cloud-map/latest/api/)\. For example, calls to the `CreateHttpNamespace`, `DeleteService`, and `RegisterInstance` actions generate entries in the CloudTrail log files\. \(CloudTrail doesn't capture calls to the AWS Cloud Map [DiscoverInstances](https://docs.aws.amazon.com/cloud-map/latest/api/API_DiscoverInstances.html) API\.\)
+Most AWS Cloud Map actions are logged by CloudTrail and are documented in the [AWS Cloud Map API Reference](https://docs.aws.amazon.com/cloud-map/latest/api/)\. For example, calls to the [CreateHttpNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateHttpNamespace.html), [DeleteService](https://docs.aws.amazon.com/cloud-map/latest/api/API_DeleteService.html), and [RegisterInstance](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html) actions generate entries in the CloudTrail log files\. \(CloudTrail doesn't capture calls to the AWS Cloud Map [DiscoverInstances](https://docs.aws.amazon.com/cloud-map/latest/api/API_DiscoverInstances.html) API\.\)
 
 Every event or log entry contains information about who generated the request\. The identity information helps you determine the following: 
 + Whether the request was made with root or IAM user credentials\.
@@ -36,7 +36,7 @@ CloudTrail lets you view recent events in **Event history**\. To view events for
 
 A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log files are not an ordered stack trace of the public API calls, so they do not appear in any specific order\. 
 
-The `eventName` element identifies the action that occurred\. CloudTrail supports all AWS Cloud Map API actions\. The following example shows a CloudTrail log entry for `CreatePublicDnsNamespace`\.
+The `eventName` element identifies the action that occurred\. CloudTrail supports all AWS Cloud Map API actions\. The following example shows a CloudTrail log entry for [CreatePublicDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePublicDnsNamespace.html)\.
 
 ```
 {

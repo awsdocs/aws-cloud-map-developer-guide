@@ -131,4 +131,4 @@ If you have experience with Windows PowerShell, you might prefer to use AWS Tool
 
 ## Download an AWS SDK<a name="setting-up-sdk"></a>
 
-If you're using a programming language that AWS provides an SDK for, we recommend that you use an SDK instead of the AWS Cloud Map API\. The SDKs make authentication simpler, integrate easily with your development environment, and provide easy access to AWS Cloud Map commands\. For more information, see [Tools for Amazon Web Services](https://aws.amazon.com/tools/)\.
+If you're using a programming language that AWS provides an SDK for, we recommend that you use an SDK instead of the AWS Cloud Map API\. The SDKs make authentication simpler, integrate easily with your development environment, and provide easy access to AWS Cloud Map commands\. For more information, see [Tools for Amazon Web Services](http://aws.amazon.com/tools/)\.

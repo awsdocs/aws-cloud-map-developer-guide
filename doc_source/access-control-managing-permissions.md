@@ -122,7 +122,6 @@ The following permissions policy grants the user read\-only access to all AWS Cl
             "servicediscovery:Get*",
             "servicediscovery:List*",
             "servicediscovery:DiscoverInstances"
-
          ],
          "Resource":"*"
       }

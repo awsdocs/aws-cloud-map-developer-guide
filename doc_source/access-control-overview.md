@@ -51,7 +51,7 @@ You can attach policies to IAM identities\. For example, you can do the followin
 
   For more information about how to delegate permissions to users in another AWS account, see [Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html) in the *IAM User Guide*\.
 
-The following example policy allows a user to perform the `CreatePublicDnsNamespace` action to create a public DNS namespace for any AWS account\. The Amazon Route 53 permissions are required because when you create a public DNS namespace, AWS Cloud Map also creates a Route 53 hosted zone:
+The following example policy allows a user to perform the [CreatePublicDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePublicDnsNamespace.html) action to create a public DNS namespace for any AWS account\. The Amazon Route 53 permissions are required because when you create a public DNS namespace, AWS Cloud Map also creates a Route 53 hosted zone:
 
 ```
 {
@@ -71,7 +71,7 @@ The following example policy allows a user to perform the `CreatePublicDnsNamesp
 }
 ```
 
-If you want the policy to instead apply to private DNS namespaces, you need to grant permissions to use the AWS Cloud Map `CreatePrivateDnsNamespace` action\. In addition, you grant permission to use the same Route 53 actions as in the previous example because AWS Cloud Map creates a Route 53 private hosted zone\. You also grant permission to use two Amazon EC2 actions, `DescribeVpcs` and `DescribeRegion`:
+If you want the policy to instead apply to private DNS namespaces, you need to grant permissions to use the AWS Cloud Map [CreatePrivateDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePrivateDnsNamespace.html) action\. In addition, you grant permission to use the same Route 53 actions as in the previous example because AWS Cloud Map creates a Route 53 private hosted zone\. You also grant permission to use two Amazon EC2 actions, `DescribeVpcs` and `DescribeRegion`:
 
 ```
 {
@@ -111,7 +111,7 @@ AWS Cloud Map includes API actions \(see the [AWS Cloud Map API Reference](https
 
 The following are the basic policy elements:
 + **Resource** – You use an Amazon Resource Name \(ARN\) to identify the resource that the policy applies to\. For more information, see [ARNs for AWS Cloud Map Resources](#access-control-resources)\.
-+ **Action** – You use action keywords to identify resource actions that you want to allow or deny\. For example, depending on the specified `Effect`, the `servicediscovery:CreateHttpNamespace` permission allows or denies a user the ability to perform the AWS Cloud Map `CreateHttpNamespace` action\.
++ **Action** – You use action keywords to identify resource actions that you want to allow or deny\. For example, depending on the specified `Effect`, the `servicediscovery:CreateHttpNamespace` permission allows or denies a user the ability to perform the AWS Cloud Map [CreateHttpNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateHttpNamespace.html) action\.
 + **Effect** – You specify the effect, either allow or deny, when a user tries to perform the action on the specified resource\. If you don't explicitly grant access to an action, access is implicitly denied\. You can also explicitly deny access to a resource, which you might do to make sure that a user cannot access it, even if a different policy grants access\.
 + **Principal** – In identity\-based policies \(IAM policies\), the user that the policy is attached to is the implicit principal\. For resource\-based policies, you specify the user, account, service, or other entity that you want to receive permissions \(applies to resource\-based policies only\)\. AWS Cloud Map doesn't support resource\-based policies\.
 

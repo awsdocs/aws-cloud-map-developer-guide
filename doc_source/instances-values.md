@@ -44,7 +44,7 @@ The port, if any, that your applications must include to access the resource tha
 The domain or subdomain name that your applications can use to access the resource that's associated with this service instance\.
 
 **Custom attributes**  
-If a resource is accessible using some method other than an IP address or a domain or subdomain name, specify one or more custom attributes that your application can use to access the resource\. You can also use custom attributes for a variety of other purposes\.   
+If a resource is accessible using some method other than an IP address or a domain or subdomain name, specify one or more custom attributes that your application can use to access the resource\. You can also use custom attributes for a variety of other purposes\.  
 You can add up to 30 custom attributes\. Note the following:  
 + If you don't specify values for any of the following fields, you must specify at least one key\-value pair for **Custom attributes**: **IPv4 address**, **IPv6 address**, **Port**, or **CNAME**\.
 + You must specify both **Key** and **Value**\.

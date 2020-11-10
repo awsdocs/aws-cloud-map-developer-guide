@@ -10,7 +10,7 @@ AWS Cloud Map is a managed solution that lets you map logical names to the resou
 
 Here's an overview of how you use AWS Cloud Map:
 
-1. Create a namespace, which is a logical grouping of services\. When you create a namespace, you specify the name that you want your applications to use to discover instances\. You also specify how you want to discover service instances that you register with AWS Cloud Map: using API calls or using DNS queries\. 
+1. Create a namespace, which is a logical grouping of services\. When you create a namespace, you specify the name that you want your applications to use to discover instances\. You also specify how you want to discover service instances that you register with AWS Cloud Map: using API calls or using DNS queries\.
 
    For more information, see the following topics:
    + [Creating Namespaces](creating-namespaces.md)
@@ -34,9 +34,9 @@ If you're using a programmatic method to perform these steps, you'll also use th
 
    1. Using the hosted zone ID that you got in step 2c, get the names of the name servers that Route 53 assigned to your hosted zone\. For more information, see [Getting the Name Servers for a Public Hosted Zone](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/GetInfoAboutHostedZone.html)\.
 
-   1. Change the name servers that are assigned to the domain\. If the domain is registered with Route 53, see [Adding or Changing Name Servers and Glue Records for a Domain ](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-name-servers-glue-records.html) for more information\.
+   1. Change the name servers that are assigned to the domain\. If the domain is registered with Route 53, see [Adding or Changing Name Servers and Glue Records for a Domain](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-name-servers-glue-records.html) for more information\.
 
-1. Create a service, which contains the service instances that identify how to contact the resources for an application, such as a web server, a DynamoDB table, or an Amazon S3 bucket\. 
+1. Create a service, which contains the service instances that identify how to contact the resources for an application, such as a web server, a DynamoDB table, or an Amazon S3 bucket\.
 
    If you created a public or private DNS namespace in step 1, the name that you specify for the service becomes part of the names of records in the Route 53 public or private hosted zone that AWS Cloud Map created automatically in step 1\. When you register an instance in the next step, AWS Cloud Map creates records in the hosted zone\. The record names are a combination of the name of the service \(such as `backend`\) and the name of the namespace \(such as `example.com`\): `backend.example.com`\.
 
@@ -58,12 +58,12 @@ If you're using a programmatic method to perform these steps, you'll also use th
    + [RegisterInstance](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html) in the *AWS Cloud Map API Reference*
 
 1. Write your application to discover instances using either the AWS Cloud Map [DiscoverInstances](https://docs.aws.amazon.com/cloud-map/latest/api/API_DiscoverInstances.html) API action or using DNS queries:
-   + If your application uses `DiscoverInstances`, AWS Cloud Map returns information about the available instances that meet the specified criteria\.
-   + If your application uses DNS queries, Route 53 returns one or more records\. 
+   + If your application uses [DiscoverInstances](https://docs.aws.amazon.com/cloud-map/latest/api/API_DiscoverInstances.html), AWS Cloud Map returns information about the available instances that meet the specified criteria\.
+   + If your application uses DNS queries, Route 53 returns one or more records\.
 
    If you specified settings for a health check when you created the service, AWS Cloud Map or Route 53 returns values only for healthy instances\.
 
-1. When you want to stop using a resource, deregister the corresponding service instance\. AWS Cloud Map automatically deletes the associated Route 53 record and health check, if any\. 
+1. When you want to stop using a resource, deregister the corresponding service instance\. AWS Cloud Map automatically deletes the associated Route 53 record and health check, if any\.
 
    For more information, see the following topics:
    + [Deregistering Service Instances](deregistering-instances.md)

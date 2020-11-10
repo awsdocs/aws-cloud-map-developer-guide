@@ -50,7 +50,7 @@ If you don't define a health check for the service, Route 53 assumes that all i
 For more information, see [Multivalue Answer Routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-multivalue) in the *Amazon Route 53 Developer Guide*\.
 
 **Record type \(public and private DNS namespaces only\)**  
-If you're using a public or private DNS name space to create the service, choose the DNS record type for the records that AWS Cloud Map creates when you register instances\. Amazon Route 53 returns the applicable value in response to DNS queries for registered instances\.   
+If you're using a public or private DNS name space to create the service, choose the DNS record type for the records that AWS Cloud Map creates when you register instances\. Amazon Route 53 returns the applicable value in response to DNS queries for registered instances\.  
 The following record types are supported:    
 **A**  
 When you register an instance, you specify the IP address of the resource in IPv4 format, such as **192\.0\.2\.44**\.  
@@ -58,7 +58,7 @@ When you register an instance, you specify the IP address of the resource in IPv
 When you register an instance, you specify the IP address of the resource in IPv6 format, such as **2001:0db8:85a3:0000:0000:abcd:0001:2345**\.  
 **CNAME**  
 When you register an instance, you specify the domain name of the resource, such as www\.example\.com\. Note the following:  
-+ If you want to choose **CNAME**, you must choose **Weighted routing** for **Routing policy**\. 
++ If you want to choose **CNAME**, you must choose **Weighted routing** for **Routing policy**\.
 + If you choose **CNAME**, you can't choose **Route 53 health check** for **Health check options**\.  
 **SRV**  
 The value for an **SRV** record uses the following values:  
@@ -94,15 +94,15 @@ If you don't configure a health check, traffic will be routed to service instanc
 **Route 53 health check \(not supported for private DNS namespaces\)**  
 If you specify settings for an Amazon Route 53 health check, AWS Cloud Map creates a Route 53 health check whenever you register an instance and deletes the health check when you deregister the instance\.  
 For public DNS namespaces, AWS Cloud Map associates the health check with the Route 53 record that AWS Cloud Map creates when you register an instance\.  
-For namespaces for which you use API calls to discover instances, AWS Cloud Map creates a Route 53 health check, but there's no DNS record for AWS Cloud Map to associate the health check with\. To determine whether a health check is healthy, you can configure monitoring using either the Route 53 console or using Amazon CloudWatch\. For more information about using the Route 53 console, see [Get Notified When a Health Check Fails](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-creating-values.html#health-checks-creating-values-alarm) in the *Amazon Route 53 Developer Guide*\. For more information about using CloudWatch, see [PutMetricAlarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricAlarm.html) in the *Amazon CloudWatch API Reference*\.   
-For information about the charges for Route 53 health checks, see [Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.  
+For namespaces for which you use API calls to discover instances, AWS Cloud Map creates a Route 53 health check, but there's no DNS record for AWS Cloud Map to associate the health check with\. To determine whether a health check is healthy, you can configure monitoring using either the Route 53 console or using Amazon CloudWatch\. For more information about using the Route 53 console, see [Get Notified When a Health Check Fails](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/health-checks-creating-values.html#health-checks-creating-values-alarm) in the *Amazon Route 53 Developer Guide*\. For more information about using CloudWatch, see [PutMetricAlarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricAlarm.html) in the *Amazon CloudWatch API Reference*\.  
+For information about the charges for Route 53 health checks, see [Route 53 Pricing](http://aws.amazon.com/route53/pricing/)\.  
 **Custom health check**  
 If you configure AWS Cloud Map to use a custom health check when you register an instance, you must use a third\-party health checker to evaluate the health of your resources\. Custom health checks are useful in the following circumstances:  
 + You can't use a Route 53 health check because the resource isn't available over the internet\. For example, you can use a custom health check when the instance is in an Amazon VPC\. \(To check the health of resources in a VPC, the health checker must also be in the VPC\.\) 
 + You want to use a third\-party health checker regardless of where your resources are\.
 
 **Failure threshold \(Route 53 health check only\)**  
-The number of consecutive Route 53 health checks that a resource must pass or fail for Amazon Route 53 to change the current status of the resource from healthy to unhealthy or vice versa\. For more information, see [How Amazon Route 53 Determines Whether a Health Check Is Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html) *Amazon Route 53 Developer Guide*\. 
+The number of consecutive Route 53 health checks that a resource must pass or fail for Amazon Route 53 to change the current status of the resource from healthy to unhealthy or vice versa\. For more information, see [How Amazon Route 53 Determines Whether a Health Check Is Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html) *Amazon Route 53 Developer Guide*\.
 
 **Health check protocol \(Route 53 health check only\)**  
 The method that you want Amazon Route 53 to use to check the health of your resource:    
@@ -111,10 +111,10 @@ Route 53 tries to establish a TCP connection\. If successful, Route 53 submits
 **HTTPS**  
 Route 53 tries to establish a TCP connection\. If successful, Route 53 submits an HTTPS request and waits for an HTTP status code of 2xx or 3xx\.  
 If you choose HTTPS, the resource must support TLS v1\.0 or later\.
-If you choose HTTPS for the value of **Health check protocol**, an additional charge applies\. For more information, see [Route 53 Pricing](https://aws.amazon.com/route53/pricing/)\.  
+If you choose HTTPS for the value of **Health check protocol**, an additional charge applies\. For more information, see [Route 53 Pricing](http://aws.amazon.com/route53/pricing/)\.  
 **TCP**  
 Route 53 tries to establish a TCP connection\.
 For more information, see [How Amazon Route 53 Determines Whether a Health Check Is Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html)\.
 
 **Health check path \(Route 53 HTTP and HTTPS health checks only\)**  
-The path that you want Amazon Route 53 to request when performing health checks\. The path can be any value for which your resource will return an HTTP status code of 2xx or 3xx when the resource is healthy, such as the file `/docs/route53-health-check.html`\. You can also include query string parameters, for example, `/welcome.html?language=jp&login=y`\. The AWS Cloud Map console automatically adds a leading slash \(/\) character\. 
+The path that you want Amazon Route 53 to request when performing health checks\. The path can be any value for which your resource will return an HTTP status code of 2xx or 3xx when the resource is healthy, such as the file `/docs/route53-health-check.html`\. You can also include query string parameters, for example, `/welcome.html?language=jp&login=y`\. The AWS Cloud Map console automatically adds a leading slash \(/\) character\.
