@@ -40,7 +40,7 @@ You can't use the console to configure AWS Cloud Map to create a Route 53 alias
 AWS Cloud Map supports the following Route 53 routing policies:    
 **Weighted routing**  
 Route 53 returns the applicable value from one randomly selected instance from among the instances that you registered using the same service\. All records have the same weight, so you can't route more or less traffic to any instances\.  
-For example, suppose the service includes configurations for one **A** record and a health check, and you use the service to register 10 instances\. Route 53 responds to DNS queries with the IP address for one randomly selected instance from among the healthy instances\. If no instances are healthy, Route 53 responds to DNS queries as if all the instances were healthy\.  
+For example, suppose the service includes configurations for one **A** record and a health check, and you use the service to register 10 instances\. Route 53 responds to DNS queries with the IP address for one randomly selected instance from among the healthy instances\. If no instances are healthy, Route 53 responds to DNS queries as if all the instances were unhealthy\.  
 If you don't define a health check for the service, Route 53 assumes that all instances are healthy and returns the applicable value for one randomly selected instance\.  
 For more information, see [Weighted Routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted) in the *Amazon Route 53 Developer Guide*\.  
 **Multivalue answer routing**  
