@@ -1,7 +1,7 @@
 # AWS Cloud Map Developer Guide
 
 -----
-*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy;  Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -21,7 +21,7 @@ Amazon's trademarks and trade dress may not be used in
    + [AWS Cloud Map and AWS Cloud Compliance](compliance.md)
 + [Setting Up AWS Cloud Map](setting-up-cloud-map.md)
 + [Using AWS Cloud Map](using-cloud-map.md)
-   + [Configuring AWS Cloud Map Using the Console](configuring-cloud-map.md)
+   + [Configuring AWS Cloud Map Using the AWS Cloud Map Console](configuring-cloud-map.md)
       + [Working with Namespaces](working-with-namespaces.md)
          + [Creating Namespaces](creating-namespaces.md)
          + [Values That You Specify When You Create Namespaces](namespaces-values.md)
@@ -38,7 +38,7 @@ Amazon's trademarks and trade dress may not be used in
          + [Updating Instances](updating-instances.md)
          + [Viewing a List of Service Instances](listing-instances.md)
          + [Deregistering Service Instances](deregistering-instances.md)
-      + [AWS Cloud Map Features That Aren't Available on the Console](configuring-cloud-map-feature-not-available.md)
+      + [AWS Cloud Map Features That Aren't Available on the AWS Cloud Map Console](configuring-cloud-map-feature-not-available.md)
 + [Security in AWS Cloud Map](security.md)
    + [Identity and Access Management in AWS Cloud Map](auth-and-access-control.md)
       + [Overview of Managing Access Permissions to Your AWS Cloud Map Resources](access-control-overview.md)

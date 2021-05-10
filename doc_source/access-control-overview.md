@@ -40,7 +40,7 @@ Policies attached to an IAM identity are referred to as *identity\-based* polici
 ### Identity\-Based Policies \(IAM Policies\)<a name="access-control-manage-access-intro-iam-policies"></a>
 
 You can attach policies to IAM identities\. For example, you can do the following:
-+ **Attach a permissions policy to a user or a group in your account** – An account administrator can use a permissions policy that is associated with a particular user to grant permissions for that user to create AWS Cloud Map resources\.
++ **Attach a permissions policy to a user or a group in your account** – An account administrator can use a permissions policy that's associated with a particular user to grant permissions for that user to create AWS Cloud Map resources\.
 + **Attach a permissions policy to a role \(grant cross\-account permissions\)** – You can grant permission to perform AWS Cloud Map actions to a user that was created by another AWS account\. To do so, you attach a permissions policy to an IAM role, and then you allow the user in the other account to assume the role\. The following example explains how this works for two AWS accounts, account A and account B:
 
   1. Account A administrator creates an IAM role and attaches to the role a permissions policy that grants permissions to create or access resources that are owned by account A\.

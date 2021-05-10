@@ -21,7 +21,7 @@ For an ongoing record of events in your AWS account, including events for AWS Cl
 
 Most AWS Cloud Map actions are logged by CloudTrail and are documented in the [AWS Cloud Map API Reference](https://docs.aws.amazon.com/cloud-map/latest/api/)\. For example, calls to the [CreateHttpNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateHttpNamespace.html), [DeleteService](https://docs.aws.amazon.com/cloud-map/latest/api/API_DeleteService.html), and [RegisterInstance](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html) actions generate entries in the CloudTrail log files\. \(CloudTrail doesn't capture calls to the AWS Cloud Map [DiscoverInstances](https://docs.aws.amazon.com/cloud-map/latest/api/API_DiscoverInstances.html) API\.\)
 
-Every event or log entry contains information about who generated the request\. The identity information helps you determine the following: 
+Every event or log entry contains information about who generated the request\. The identity information helps you determine the following situations: 
 + Whether the request was made with root or IAM user credentials\.
 + Whether the request was made with temporary security credentials for a role or federated user\.
 + Whether the request was made by another AWS service\.
@@ -30,11 +30,11 @@ For more information, see the [CloudTrail userIdentity Element](https://docs.aws
 
 ## Viewing AWS Cloud Map Events in Event History<a name="cloud-map-events-in-cloudtrail-event-history"></a>
 
-CloudTrail lets you view recent events in **Event history**\. To view events for AWS Cloud Map API requests, you must choose the AWS Region where you created your namespaces in the Region selector at the top of the console\. If you created namespaces in multiple AWS Regions, you must view the events for each Region separately\. For more information, see [Viewing Events with CloudTrail Event History](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html) in the *AWS CloudTrail User Guide*\.
+With CloudTrail, you can view recent events in **Event history**\. To view events for AWS Cloud Map API requests, you need to choose the AWS Region where you created your namespaces in the Region selector at the top of the console\. If you created namespaces in multiple AWS Regions, you must view the events for each Region separately\. For more information, see [Viewing Events with CloudTrail Event History](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html) in the *AWS CloudTrail User Guide*\.
 
 ## Understanding AWS Cloud Map Log File Entries<a name="understanding-cloud-map-entries-in-cloudtrail"></a>
 
-A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log files are not an ordered stack trace of the public API calls, so they do not appear in any specific order\. 
+A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters\. CloudTrail log files aren't an ordered stack trace of the public API calls, so they don't appear in any specific order\. 
 
 The `eventName` element identifies the action that occurred\. CloudTrail supports all AWS Cloud Map API actions\. The following example shows a CloudTrail log entry for [CreatePublicDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePublicDnsNamespace.html)\.
 

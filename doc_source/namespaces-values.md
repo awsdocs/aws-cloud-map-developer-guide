@@ -3,19 +3,20 @@
 When you create an AWS Cloud Map namespace, you specify the following values\.
 
 **Note**  
-You can't change any values in a namespace after you create it\.
+After you create a namespace, you can change tags\. However, you can't change any other values\.
 
 **Values**
 + [Namespace name](#namespace-creating-values-name)
 + [Namespace description](#namespace-creating-values-description)
 + [Instance discovery](#namespace-creating-values-instance-discovery)
++ [Tags](#namespace-creating-values-tags)
 + [VPC](#namespace-creating-values-vpc)
 
 **Namespace name**  
-The name that you specify for a namespace depends on how you want your application to discover instances, which is determined by the option that you choose for **Instance discovery**, later on the current page in the console\.    
+The name that you specify for a namespace depends on how you want your application to discover instances\. The method of how instances are discovered is determined by the option that you choose for **Instance discovery**\. The options appear later on the current page in the console\. They are as follows:    
 **API calls**  
 If you choose this option, your application discovers service instances by specifying the namespace name and service name in a [DiscoverInstances](https://docs.aws.amazon.com/cloud-map/latest/api/API_DiscoverInstances.html) request\. For more information, see [DiscoverInstances](https://docs.aws.amazon.com/cloud-map/latest/api/API_DiscoverInstances.html) in the *AWS Cloud Map API Reference*\.  
-You can specify a name up to 1,024 characters long\. The name can contain the characters a\-z, A\-Z, 0\-9, \_ \(underscore\), and \- \(hyphen\)\.  
+You can specify a name that's up to 1,024 characters in length\. A name can contain both uppercase and lowercase letters, numbers, underscores \(\_\), and hyphens \(\-\)\.  
 **API calls and DNS queries in VPCs**  
 Enter the domain name that you want your applications in a VPC to use when they discover instances by submitting DNS queries\. AWS Cloud Map automatically creates an Amazon Route 53 private hosted zone that has this name\. When you register service instances, AWS Cloud Map creates DNS records in the hosted zone that have names in the following format:  
 *service\-name*\.*namespace\-name*  
@@ -40,6 +41,10 @@ Choose this option if you want your application to use only API calls to discove
 Choose this option if you want your application to be able to discover instances using either API calls or using DNS queries in a VPC\. You aren't required to use both methods\.  
 **API calls and public DNS queries**  
 Choose this option if you want your application to be able to discover instances using either API calls or using public DNS queries\. You aren't required to use both methods\.
+
+**Tags**  
+You can specify one or more tags to add to your namespace\. A tag is an optional label that you can assign to an AWS resource\. Each tag consists of a key and a value\. For example, you can define a tag with Key = Environment and Value = Production\. Tags enable you to categorize your AWS resources so you can more easily manage them\.  
+You can update or remove tags on your namespaces after they have been created\. For more information, see [Tagging your AWS Cloud Map resources](using-tags.md)\.
 
 **VPC**  
 When you choose **API calls and DNS queries in VPCs** for the value of **Instance discovery**, AWS Cloud Map creates an Amazon Route 53 private hosted zone that has the same name\. AWS Cloud Map associates the VPC that you choose in the **VPC** list with that private hosted zone\.  

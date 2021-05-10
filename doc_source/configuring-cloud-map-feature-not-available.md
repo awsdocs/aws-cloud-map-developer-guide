@@ -1,6 +1,6 @@
-# AWS Cloud Map Features That Aren't Available on the Console<a name="configuring-cloud-map-feature-not-available"></a>
+# AWS Cloud Map Features That Aren't Available on the AWS Cloud Map Console<a name="configuring-cloud-map-feature-not-available"></a>
 
-The following AWS Cloud Map features aren't available on the console\. To use these features, you must use a programmatic method to access AWS Cloud Map:
+The following AWS Cloud Map features aren't available on the AWS Cloud Map console\. To use these features, you must use a programmatic method to access AWS Cloud Map:
 
 **Creating Route 53 alias records when you register service instances**  
 When you register a service instance using the console, you can't create an alias record that routes traffic to an Elastic Load Balancing \(ELB\) load balancer\. Note the following:  

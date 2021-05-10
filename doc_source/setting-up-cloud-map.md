@@ -1,6 +1,6 @@
 # Setting Up AWS Cloud Map<a name="setting-up-cloud-map"></a>
 
-The overview and procedures in this section help you get started with AWS\.
+The overview and procedures in this section are meant to help you get started with AWS\.
 
 **Topics**
 + [Sign Up for AWS](#setting-up-sign-up-for-aws)
@@ -11,7 +11,7 @@ The overview and procedures in this section help you get started with AWS\.
 
 ## Sign Up for AWS<a name="setting-up-sign-up-for-aws"></a>
 
-When you sign up for AWS, your AWS account is automatically signed up for all services in AWS, including AWS Cloud Map\. You are charged only for the services that you use\.
+When you sign up for AWS, your AWS account is automatically signed up for all services in AWS, including AWS Cloud Map\. You're charged only for the services that you use\.
 
 If you have an AWS account already, skip to [Access Your Account](#setting-up-access-account)\. If you don't have an AWS account, use the following procedure to create one\.<a name="setting-up-sign-up-for-aws-procedure"></a>
 
@@ -36,12 +36,12 @@ You use AWS services by using any of the following options:
 
 For each of those options, you need to access your AWS account by providing credentials that verify that you have permissions to use the services\.
 
-### Access the Console<a name="setting-up-access-account-console"></a>
+### Access the AWS Management Console<a name="setting-up-access-account-console"></a>
 
-To access the AWS Management Console for the first time, you provide an email address and a password\. This combination of your email address and password is called your *root identity* or *root account credentials*\. After you access your account for the first time, we strongly recommend that you don't use your root account credentials again for everyday use\. Instead, you should create new credentials by using [AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)\. To do that, you create a user account for yourself known as an *IAM user*, and then add the IAM user to an IAM group with administrative permissions or grant the IAM user administrative permissions\. You then can access AWS using a special URL and the credentials for the IAM user\. You also can add other IAM users later, and restrict their access to specified resources in the account\.
+To access the AWS Management Console for the first time, you need to provide an email address and a password\. The combination of your email address and password is referred to as your *root identity* or *root account credentials*\. We strongly recommend that, after accessing your account for the first time, you don't use your root account credentials again for everyday use\. Instead, you should create new credentials by using [AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)\. To do that, you create a user account for yourself known as an *IAM user*, and then add the IAM user to an IAM group with administrative permissions\. Or, you can alternatively grant the IAM user administrative permissions\. You then can access AWS using a special URL and the credentials for the IAM user\. You also can add other IAM users later, and restrict their access to specified resources in the account\.
 
 **Note**  
-Some ad\-blocking plugins for web browsers interfere with AWS Cloud Map console operations, which can cause the console to behave unpredictably\. If you installed an ad\-blocking plugin for your browser, we recommend that you add the URL for the AWS Cloud Map console, [https://console\.aws\.amazon\.com/cloudmap/home](https://console.aws.amazon.com/cloudmap/home), to the whitelist for the plugin\.
+Some ad\-blocking plugins for web browsers interfere with AWS Cloud Map console operations, which can cause the console to behave unpredictably\. If you installed an ad\-blocking plugin for your browser, we recommend that you add the URL for the AWS Cloud Map console, [https://console\.aws\.amazon\.com/cloudmap/home](https://console.aws.amazon.com/cloudmap/home), to the approved list for the plugin\.
 
 ### Access the API, AWS CLI, AWS Tools for Windows PowerShell, or the AWS SDKs<a name="setting-up-access-account-api-cli"></a>
 
@@ -57,7 +57,7 @@ Perform the following procedures to create a group for administrators, create an
 
 1. Sign in to the [IAM console](https://console.aws.amazon.com/iam/) as the account owner by choosing **Root user** and entering your AWS account email address\. On the next page, enter your password\.
 **Note**  
-We strongly recommend that you adhere to the best practice of using the **Administrator** IAM user below and securely lock away the root user credentials\. Sign in as the root user only to perform a few [account and service management tasks](https://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html)\.
+We strongly recommend that you adhere to the best practice of using the **Administrator** IAM user that follows and securely lock away the root user credentials\. Sign in as the root user only to perform a few [account and service management tasks](https://docs.aws.amazon.com/general/latest/gr/aws_tasks-that-require-root.html)\.
 
 1. In the navigation pane, choose **Users** and then choose **Add user**\.
 
@@ -75,7 +75,7 @@ We strongly recommend that you adhere to the best practice of using the **Admini
 
 1. In the **Create group** dialog box, for **Group name** enter **Administrators**\.
 
-1. Choose **Filter policies**, and then select **AWS managed \-job function** to filter the table contents\.
+1. Choose **Filter policies**, and then select **AWS managed \- job function** to filter the table contents\.
 
 1. In the policy list, select the check box for **AdministratorAccess**\. Then choose **Create group**\.
 **Note**  
@@ -131,4 +131,4 @@ If you have experience with Windows PowerShell, you might prefer to use AWS Tool
 
 ## Download an AWS SDK<a name="setting-up-sdk"></a>
 
-If you're using a programming language that AWS provides an SDK for, we recommend that you use an SDK instead of the AWS Cloud Map API\. The SDKs make authentication simpler, integrate easily with your development environment, and provide easy access to AWS Cloud Map commands\. For more information, see [Tools for Amazon Web Services](http://aws.amazon.com/tools/)\.
+If you're using a programming language that AWS provides an SDK for, we recommend that you use an SDK instead of the AWS Cloud Map API\. Using an SDK has several benefits\. SDKs make authentication simpler, integrate easily with your development environment, and provide access to AWS Cloud Map commands\. For more information, see [Tools for Amazon Web Services](http://aws.amazon.com/tools/)\.

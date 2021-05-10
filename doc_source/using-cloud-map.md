@@ -1,14 +1,14 @@
 # Using AWS Cloud Map<a name="using-cloud-map"></a>
 
-AWS Cloud Map is a managed solution that lets you map logical names to the resources for an application, and allows your applications to discover resources using one of the AWS SDKs, RESTful API calls, or DNS queries\. AWS Cloud Map serves only healthy resources, which can be Amazon DynamoDB \(DynamoDB\) tables, Amazon Simple Queue Service \(Amazon SQS\) queues, or any higher\-level application services that are built using Amazon Elastic Compute Cloud \(Amazon EC2\) instances or Amazon Elastic Container Service \(Amazon ECS\) tasks\.
+AWS Cloud Map is a managed solution that you can use to map logical names to the resources for an application\. It also helps your applications discover resources using one of the AWS SDKs, RESTful API calls, or DNS queries\. AWS Cloud Map serves only healthy resources, which can be Amazon DynamoDB \(DynamoDB\) tables, Amazon Simple Queue Service \(Amazon SQS\) queues, or any higher\-level application services that are built using Amazon Elastic Compute Cloud \(Amazon EC2\) instances or Amazon Elastic Container Service \(Amazon ECS\) tasks\.
 
 **Topics**
 + [Overview of How to Use AWS Cloud Map](#overview-service-discovery-tasks)
-+ [Configuring AWS Cloud Map Using the Console](configuring-cloud-map.md)
++ [Configuring AWS Cloud Map Using the AWS Cloud Map Console](configuring-cloud-map.md)
 
 ## Overview of How to Use AWS Cloud Map<a name="overview-service-discovery-tasks"></a>
 
-Here's an overview of how you use AWS Cloud Map:
+The following is an overview of how you can use AWS Cloud Map:
 
 1. Create a namespace, which is a logical grouping of services\. When you create a namespace, you specify the name that you want your applications to use to discover instances\. You also specify how you want to discover service instances that you register with AWS Cloud Map: using API calls or using DNS queries\.
 
@@ -18,7 +18,7 @@ Here's an overview of how you use AWS Cloud Map:
 
    If you create a public or private DNS namespace, AWS Cloud Map automatically creates an Amazon Route 53 public or private hosted zone that has the same name as the namespace\. Even with public and private DNS namespaces, you can still discover instances using AWS Cloud Map [DiscoverInstances](https://docs.aws.amazon.com/cloud-map/latest/api/API_DiscoverInstances.html) requests\.
 
-   For a list of the endpoints that you can submit AWS Cloud Map API requests to, see [AWS Cloud Map](https://docs.aws.amazon.com/general/latest/gr/rande.html#cloud_map_region) in the "AWS Regions and Endpoints" chapter in the *Amazon Web Services General Reference*\.
+   For a list of the endpoints that you can submit AWS Cloud Map API requests to, see [AWS Cloud Map](https://docs.aws.amazon.com/general/latest/gr/cloud_map.html) in the "AWS Regions and Endpoints" chapter in the *Amazon Web Services General Reference*\.
 
 1. If you created a public DNS namespace, perform the following steps to change the name servers for the domain registration to the name servers for the Route 53 hosted zone that AWS Cloud Map created when you created the namespace:
 

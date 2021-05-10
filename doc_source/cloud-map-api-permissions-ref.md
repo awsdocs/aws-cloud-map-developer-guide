@@ -2,7 +2,7 @@
 
 When you set up [Access Control](auth-and-access-control.md#access-control) and write a permissions policy that you can attach to an IAM identity \(identity\-based policies\), you can use the following lists as a reference\. The lists include each AWS Cloud Map API action, the actions that you must grant permissions access to, and the AWS resource that you must grant access to\. You specify the actions in the `Action` field for the policy, and you specify the resource value in the `Resource` field for the policy\. 
 
-You can use AWS Cloud Map–specific condition keys in your IAM policies for some operations\. For more information, see [AWS Cloud Map Condition Keys Reference](#condition-keys-cloud-map-ref)\. You can also use AWS\-wide condition keys\. For a complete list of AWS\-wide keys, see [Available Keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys) in the *IAM User Guide*\. 
+You can use AWS Cloud Map–specific condition keys in your IAM policies for some operations\. For more information, see [AWS Cloud Map Condition Keys Reference](#condition-keys-cloud-map-ref)\. You can also use AWS wide condition keys\. For a complete list of AWS wide keys, see [Available Keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys) in the *IAM User Guide*\. 
 
 To specify an action, use the `servicediscovery` prefix followed by the API action name, for example, `servicediscovery:CreatePublicDnsNamespace` and `route53:CreateHostedZone`\.
 
@@ -126,14 +126,14 @@ Resources: `*`, `arn:aws:servicediscovery:region:account-id:service/service-id`
 
 AWS Cloud Map defines the following condition keys that can be used in the `Condition` element of an IAM policy\. You can use these keys to further refine the conditions under which the policy statement applies\. For more information, see [Specifying Conditions in an IAM Policy](access-control-overview.md#specifying-conditions)\.
 
-**servicediscovery:NamespaceArn**  
+**`servicediscovery:NamespaceArn`**  
 A filter that lets you get objects by specifying the Amazon Resource Name \(ARN\) for the related namespace\.
 
-**servicediscovery:NamespaceName**  
+**`servicediscovery:NamespaceName`**  
 A filter that lets you get objects by specifying the name of the related namespace\.
 
-**servicediscovery:ServiceArn**  
+**`servicediscovery:ServiceArn`**  
 A filter that lets you get objects by specifying the Amazon Resource Name \(ARN\) for the related service\.
 
-**servicediscovery:ServiceName**  
+**`servicediscovery:ServiceName`**  
 A filter that lets you get objects by specifying the name of the related service\.
