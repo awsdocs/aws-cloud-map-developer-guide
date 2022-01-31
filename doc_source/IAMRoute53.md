@@ -9,6 +9,6 @@ AWS Cloud Map integrates with AWS Identity and Access Management \(IAM\), a serv
 For example, you can use IAM with AWS Cloud Map to control which users in your AWS account can create a new namespace or register instances\.
 
 For general information about IAM, see the following resources:
-+ [Identity and Access Management in AWS Cloud Map](auth-and-access-control.md)
-+ [Identity and Access Management \(IAM\)](http://aws.amazon.com/iam/)
++ [AWS Identity and Access Management in AWS Cloud Map](auth-and-access-control.md)
++ [AWS Identity and Access Management](http://aws.amazon.com/iam/)
 + [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/)

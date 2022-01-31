@@ -4,7 +4,7 @@ AWS Cloud Map is a managed solution that you can use to map logical names to the
 
 **Topics**
 + [Overview of How to Use AWS Cloud Map](#overview-service-discovery-tasks)
-+ [Configuring AWS Cloud Map Using the AWS Cloud Map Console](configuring-cloud-map.md)
++ [Configuring AWS Cloud Map](configuring-cloud-map.md)
 
 ## Overview of How to Use AWS Cloud Map<a name="overview-service-discovery-tasks"></a>
 

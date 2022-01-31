@@ -108,9 +108,25 @@ Required Permissions \(API Action\):
 + `ec2:DescribeInstances`
 Resources: `*`
 
+[UpdateHttpNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_UpdateHttpNamespace.html)  
+Required Permissions \(API Action\): `servicediscovery:UpdateHttpNamespace`  
+Resources: `*`, `arn:aws:servicediscovery:region:account-id:namespace/namespace-id`
+
 [UpdateInstanceCustomHealthStatus](https://docs.aws.amazon.com/cloud-map/latest/api/API_UpdateInstanceCustomHealthStatus.html)  
 Required Permissions \(API Action\): `servicediscovery:UpdateInstanceCustomHealthStatus`  
 Resources: `*`
+
+[UpdatePrivateDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_UpdatePrivateDnsNamespace.html)  
+Required Permissions \(API Action\):  
++ `servicediscovery:UpdatePrivateDnsNamespace`
++ `route53:ChangeResourceRecordSets`
+Resources: `*`, `arn:aws:servicediscovery:region:account-id:namespace/namespace-id`
+
+[UpdatePublicDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_UpdatePublicDnsNamespace.html)  
+Required Permissions \(API Action\):  
++ `servicediscovery:UpdatePublicDnsNamespace`
++ `route53:ChangeResourceRecordSets`
+Resources: `*`, `arn:aws:servicediscovery:region:account-id:namespace/namespace-id`
 
 [UpdateService](https://docs.aws.amazon.com/cloud-map/latest/api/API_UpdateService.html)  
 Required Permissions \(API Action\):  

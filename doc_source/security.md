@@ -9,7 +9,7 @@ Security is a shared responsibility between AWS and you\. The [shared responsibi
 This documentation helps you understand how to apply the shared responsibility model when using AWS Cloud Map\. The following topics show you how to configure AWS Cloud Map to meet your security and compliance objectives\. You also learn how to use other AWS services that help you to monitor and secure your AWS Cloud Map resources\. 
 
 **Topics**
-+ [Identity and Access Management in AWS Cloud Map](auth-and-access-control.md)
++ [AWS Identity and Access Management in AWS Cloud Map](auth-and-access-control.md)
 + [Logging and Monitoring in AWS Cloud Map](logging-monitoring.md)
 + [Compliance Validation for AWS Cloud Map](cloud-map-compliance.md)
 + [Resilience in AWS Cloud Map](disaster-recovery-resiliency.md)

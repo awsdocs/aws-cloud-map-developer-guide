@@ -1,6 +1,6 @@
-# Configuring AWS Cloud Map Using the AWS Cloud Map Console<a name="configuring-cloud-map"></a>
+# Configuring AWS Cloud Map<a name="configuring-cloud-map"></a>
 
-The following sections explain how to use the AWS Cloud Map console to create, view, and delete namespaces and services, and register and deregister instances\.
+The following sections explain how to use the AWS Cloud Map console and AWS CLI to create, view, and delete namespaces and services, and register and deregister instances\.
 
 In a production environment, you'll probably perform most AWS Cloud Map actions programmatically\. For more information about programmatic access to AWS Cloud Map, see the following pages for documentation and downloads:
 + [Setting Up AWS Cloud Map](setting-up-cloud-map.md)

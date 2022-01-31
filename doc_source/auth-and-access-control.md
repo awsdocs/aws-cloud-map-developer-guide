@@ -1,4 +1,4 @@
-# Identity and Access Management in AWS Cloud Map<a name="auth-and-access-control"></a>
+# AWS Identity and Access Management in AWS Cloud Map<a name="auth-and-access-control"></a>
 
 To perform any action on AWS Cloud Map resources, such as registering a domain or updating a record, AWS Identity and Access Management \(IAM\) requires you to authenticate that you're an approved AWS user\. If you're using the AWS Cloud Map console, you authenticate your identity by providing your AWS user name and a password\. If you're accessing AWS Cloud Map programmatically, your application authenticates your identity for you by using access keys or by signing requests\.
 

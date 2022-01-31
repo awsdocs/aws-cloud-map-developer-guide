@@ -2,9 +2,10 @@
 
 Before you can delete a service, you must deregister all service instances that were registered using the service\.
 
-To deregister a service instance, perform the following procedure\.<a name="deregistering-instances-procedure"></a>
+To deregister a service instance, perform the following procedure\.
 
-**To deregister a service instance**
+------
+#### [ AWS Management Console ]
 
 1. Sign in to the AWS Management Console and open the AWS Cloud Map console at [https://console\.aws\.amazon\.com/cloudmap/](https://console.aws.amazon.com/cloudmap/)\.
 
@@ -19,3 +20,15 @@ To deregister a service instance, perform the following procedure\.<a name="dere
 1. Choose **Deregister**\.
 
 1. Confirm that you want to deregister the service instance\.
+
+------
+#### [ AWS CLI ]
++ Deregister a service instance with the `[deregister\-instance](https://docs.aws.amazon.com/cli/latest/reference/servicediscovery/deregister-instance.html)` command \(replace the *red* values with your own\)\. This command deletes the Amazon Route 53 DNS records and any health checks that Cloud Map created for the specified instance\.
+
+  ```
+  aws servicediscovery deregister-instance \
+      --service-id srv-xxxxxxxxx \
+      --instance-id myservice-53
+  ```
+
+------

@@ -7,7 +7,7 @@ When you register a service instance using the console, you can't create an alia
 + When you create a service, you must specify `WEIGHTED` for `RoutingPolicy`\. You can do this using the console\. For more information, see [Creating Services](creating-services.md)\.
 
   For information about creating a service using the AWS Cloud Map API, see [CreateService](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html) in the *AWS Cloud Map API Reference*\.
-+ When you register an instance, you must include the `AWS_ALIAS_DNS__NAME` attribute\. For more information, see [RegisterInstance](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html) in the *AWS Cloud Map API Reference*\.
++ When you register an instance, you must include the `AWS_ALIAS_DNS_NAME` attribute\. For more information, see [RegisterInstance](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html) in the *AWS Cloud Map API Reference*\.
 
 **Specifying the initial health status for custom health checks**  
 If you register an instance using a service that includes a custom health check, you can't specify the initial status for the custom health check\. By default, the initial status of a custom health checks is **Healthy**\. If you want the initial health status to be **Unhealthy**, register the instance programmatically and include the `AWS_INIT_HEALTH_STATUS` attribute\. For more information, see [RegisterInstance](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html) in the *AWS Cloud Map API Reference*\.

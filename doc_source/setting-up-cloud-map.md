@@ -93,9 +93,9 @@ You can use this same process to create more groups and users and to give your u
 
 **To sign in as your new IAM user**
 
-1. Sign out of the AWS console\.
+1. Sign out of the AWS Management Console\.
 
-1. Sign in by using the following URL, where *your\_aws\_account\_id* is your AWS account number without the hyphens\. For example, if your AWS account number is 1234\-5678\-9012, your AWS account ID is 123456789012:
+1. Sign in by using the following URL, where *your\_aws\_account\_id* is your AWS account number without the hyphens\. For example, if your AWS account number is `1234-5678-9012`, your AWS account ID is `123456789012`:
 
    ```
    https://your_aws_account_id.signin.aws.amazon.com/console/
@@ -111,7 +111,7 @@ If you don't want the URL for your sign\-in page to contain your AWS account ID,
 
 1. On the dashboard, choose **Customize** and enter an alias such as your company name\.
 
-1. Sign out of the AWS console\.
+1. Sign out of the AWS Management Console\.
 
 1. Sign in by using the following URL:
 
@@ -121,7 +121,7 @@ If you don't want the URL for your sign\-in page to contain your AWS account ID,
 
 To verify the sign\-in link for IAM users for your account, open the IAM console and check under **IAM users sign\-in link** on the dashboard\.
 
-For more information about using IAM, see [Identity and Access Management in AWS Cloud Map](auth-and-access-control.md)\.
+For more information about using IAM, see [AWS Identity and Access Management in AWS Cloud Map](auth-and-access-control.md)\.
 
 ## Set Up the AWS Command Line Interface or AWS Tools for Windows PowerShell<a name="setting-up-aws-cli"></a>
 

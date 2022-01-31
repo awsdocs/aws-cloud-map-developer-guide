@@ -42,6 +42,9 @@ Choose this option if you want your application to be able to discover instances
 **API calls and public DNS queries**  
 Choose this option if you want your application to be able to discover instances using either API calls or using public DNS queries\. You aren't required to use both methods\.
 
+**SOA TTL**  
+For **API calls and DNS queries in VPCs** or **API calls and public DNS queries**, the time to live \(TTL\) value for the start of authority \(SOA\) DNS record of the Route 53 hosted zone created with your namespace\. The value determines how long DNS resolvers cache information for this record before the resolvers forward another DNS query to Amazon Route 53 to get updated settings\. A smaller value will also reduce the time a missing entry will be cached \(negative caching\) at the expense of additional queries for that namespace\.
+
 **Tags**  
 You can specify one or more tags to add to your namespace\. A tag is an optional label that you can assign to an AWS resource\. Each tag consists of a key and a value\. For example, you can define a tag with Key = Environment and Value = Production\. Tags enable you to categorize your AWS resources so you can more easily manage them\.  
 You can update or remove tags on your namespaces after they have been created\. For more information, see [Tagging your AWS Cloud Map resources](using-tags.md)\.

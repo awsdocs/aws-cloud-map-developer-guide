@@ -35,7 +35,8 @@ The health check isn't deleted immediately, so it will still appear for a while 
 The IPv4 IP address, if any, where your applications can access the resource that's associated with this service instance\.
 
 **IPv6 address**  
-The IPv6 IP address, if any, where your applications can access the resource that's associated with this service instance\.
+The IPv6 IP address, if any, where your applications can access the resource that's associated with this service instance\.   
+AWS Cloud Map API endpoints are now available in `IPv6`\-only networks\.
 
 **Port**  
 The port, if any, that your applications must include to access the resource that's associated with this service instance\. **Port** is required when the service includes an **SRV** record or an Amazon Route 53 health check\.
