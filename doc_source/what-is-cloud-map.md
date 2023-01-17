@@ -15,7 +15,7 @@ AWS Cloud Map is a fully managed service that you can use to create and maintain
 AWS Cloud Map is tightly integrated with Amazon Elastic Container Service \(Amazon ECS\)\. As new container tasks spin up or down, they automatically register with AWS Cloud Map\. You can use the Kubernetes ExternalDNS connector to integrate Amazon Elastic Kubernetes Service with AWS Cloud Map\. You can also use AWS Cloud Map to register and locate any cloud resources, such as Amazon EC2 instances, Amazon DynamoDB tables, Amazon S3 buckets, Amazon Simple Queue Service \(Amazon SQS\) queues, or APIs deployed on top of Amazon API Gateway, among others\. You can specify attribute values for services instances, and clients can use these attributes to filter the resources that AWS Cloud Map returns\. For example, an application can request resources in a particular deployment stage, like BETA or PROD\.
 
 **Topics**
-+ [Accessing AWS Cloud Map](welcome-accessing-cloud-map.md)
-+ [AWS Identity and Access Management](IAMRoute53.md)
-+ [AWS Cloud Map Pricing](cloud-map-pricing.md)
-+ [AWS Cloud Map and AWS Cloud Compliance](compliance.md)
++ [Accessing AWS Cloud Map](https://docs.aws.amazon.com/cloud-map/latest/dg/welcome-accessing-cloud-map.html)
++ [AWS Identity and Access Management](https://docs.aws.amazon.com/cloud-map/latest/dg/IAMRoute53.html)
++ [AWS Cloud Map Pricing](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-pricing.html)
++ [AWS Cloud Map and AWS Cloud Compliance](https://docs.aws.amazon.com/cloud-map/latest/dg/compliance.html)
