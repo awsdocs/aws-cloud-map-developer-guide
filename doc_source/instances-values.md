@@ -8,20 +8,20 @@ When you register a service instance, you specify the following values\.
 + [IPv4 address](#instance-registering-values-ipv4-address)
 + [IPv6 address](#instance-registering-values-ipv6-address)
 + [Port](#instance-registering-values-port)
-+ [CNAME](#instance-registering-values-cname)
++ [EC2 instance ID](#instance-registering-values-ec2-instance-id)
 + [Custom attributes](#instance-registering-values-custom-attributes)
 
 **Instance type**  
 Each of the following instance types is available for selected configurations only\.    
 **IP address**  
 Choose this option when the resource that's associated with the service instance is accessible using an IP address\.  
-You can choose this option for all three types of namespaces: HTTP, public DNS, and private DNS\. For public and private DNS namespaces, it's available only when the service doesn't include a CNAME record\.  
+You can choose this option for all three types of namespaces: HTTP, public DNS, and private DNS\.  
+**EC2 Instance**  
+Choose this option when the resource that's associated with the service instance is accessible through an EC2 instance\.  
+You can choose this option for HTTP\.  
 **Identifying information for another resource**  
-Choose this option when the resource that's associated with the service instance is accessible using values other than an IP address or a domain name \(CNAME\)\. Specify the other values in **Custom attributes**\.  
-You can choose this option only for HTTP namespaces\. In addition, it's available only when the service that you're using to register the instance either doesn't include a health check or includes a custom health check\.  
-**Identifying information for another resource based on **CNAME****  
-Choose this option when the resource that's associated with the service instance is accessible using a domain name \(**CNAME**\)\.  
-You can choose this option only for public and private DNS namespaces and only when the service includes a **CNAME** record\.
+Choose this option when the resource that's associated with the service instance is accessible using values other than an IP address or an EC2 instance\. Specify the other values in **Custom attributes**\.  
+You can choose this option for all three types of namespaces: HTTP, public DNS, and private DNS\.
 
 **Service instance ID**  
 An identifier that you want to associate with the instance\. Note the following:  
@@ -41,13 +41,12 @@ AWS Cloud Map API endpoints are now available in `IPv6`\-only networks\.
 **Port**  
 The port, if any, that your applications must include to access the resource that's associated with this service instance\. **Port** is required when the service includes an **SRV** record or an Amazon Route 53 health check\.
 
-**CNAME**  
-The domain or subdomain name that your applications can use to access the resource that's associated with this service instance\.
+**EC2 instance ID**  
+The instance Id in EC2 instance Id format for the resource\.
 
 **Custom attributes**  
-If a resource is accessible using some method other than an IP address or a domain or subdomain name, specify one or more custom attributes that your application can use to access the resource\. You can also use custom attributes for a variety of other purposes\.  
+Specify key\-value pairs that you want to associate with the resource, if any\.  
 You can add up to 30 custom attributes\. Note the following:  
-+ If you don't specify values for **IPv4 address**, **IPv6 address**, **Port**, or **CNAME**, you must specify at least one key\-value pair for **Custom attributes**\.
 + You must specify both **Key** and **Value**\.
 + **Key** can be up to 255 characters long and can include the characters a\-z, A\-Z, 0\-9 and other printable ASCII characters between 33 and 126 \(Decimal\)\. Spaces, tabs, and other whitespace characters are not allowed\.
 + **Value** can be up to 1,024 characters long and can include the characters a\-z, A\-Z, 0\-9, other printable ASCII characters between 33 and 126 \(Decimal\), space, and tab\.

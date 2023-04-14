@@ -4,6 +4,7 @@ A service is a template for registering service instances, which allow you to lo
 
 **Topics**
 + [Creating Services](creating-services.md)
++ [Updating Services](editing-services.md)
 + [Values That You Specify When You Create Services](services-values.md)
 + [Viewing a List of Services That You Created in a Namespace](listing-services.md)
 + [Deleting Services](deleting-services.md)

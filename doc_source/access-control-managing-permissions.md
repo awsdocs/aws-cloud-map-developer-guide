@@ -97,9 +97,6 @@ AWS addresses many common use cases by providing standalone IAM policies that ar
 + **AWSCloudMapRegisterInstanceAccess** – Grants read\-only access to namespaces and services, and grants permission to register and deregister service instances
 + **AWSCloudMapFullAccess** – Provides full access to all AWS Cloud Map actions
 
-**Note**  
-You can review these permissions policies by signing in to the IAM console and searching for specific policies there\. You can also create your own custom IAM policies to allow permissions for AWS Cloud Map API actions\. You can attach these custom policies to the IAM users or groups that require those permissions\.
-
 ## Customer Managed Policy Examples<a name="access-policy-examples-for-sdk-cli"></a>
 
 You can create your own custom IAM policies to allow permissions for AWS Cloud Map actions\. You can attach these custom policies to the IAM users or groups that require the specified permissions\. These policies work when you are using the AWS Cloud Map API, the AWS SDKs, or the AWS CLI\. The following examples show permissions for several common use cases\. For the policy that grants a user full access to AWS Cloud Map, see [Permissions Required to Use the AWS Cloud Map Console](#console-required-permissions)\.
@@ -154,3 +151,14 @@ The following permissions policy allows users to create all types of namespaces:
    ]
 }
 ```
+
+To provide access, add permissions to your users, groups, or roles:
++ Users and groups in AWS IAM Identity Center \(successor to AWS Single Sign\-On\):
+
+  Create a permission set\. Follow the instructions in [Create a permission set](https://docs.aws.amazon.com/singlesignon/latest/userguide/howtocreatepermissionset.html) in the *AWS IAM Identity Center \(successor to AWS Single Sign\-On\) User Guide*\.
++ Users managed in IAM through an identity provider:
+
+  Create a role for identity federation\. Follow the instructions in [Creating a role for a third\-party identity provider \(federation\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp.html) in the *IAM User Guide*\.
++ IAM users:
+  + Create a role that your user can assume\. Follow the instructions in [Creating a role for an IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html) in the *IAM User Guide*\.
+  + \(Not recommended\) Attach a policy directly to a user or add a user to a user group\. Follow the instructions in [Adding permissions to a user \(console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_change-permissions.html#users_change_permissions-add-console) in the *IAM User Guide*\.

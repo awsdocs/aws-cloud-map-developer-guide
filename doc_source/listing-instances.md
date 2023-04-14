@@ -22,3 +22,44 @@ To view a list of the service instances that you registered using a service, per
   ```
 
 ------
+#### [ AWS SDK for Python \(Boto3\) ]
+
+1. If you don't already have `Boto3` installed, you can find instructions for installing, configuring, and using `Boto3` [here](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#installation)\.
+
+1. Import `Boto3` and use `servicediscovery` as your service\.
+
+   ```
+   import boto3
+   client = boto3.client('servicediscovery')
+   ```
+
+1. List service instances with `list_instances()` \(replace the *red* value with your own\)\.
+
+   ```
+   response = client.list_instances(
+       ServiceId='srv-xxxxxxxxx',
+   )
+   # If you want to see the response
+   print(response)
+   ```
+
+   Example response output
+
+   ```
+   {
+       'Instances': [
+           {
+               'Attributes': {
+                   'AWS_INSTANCE_IPV4': '172.2.1.3',
+                   'AWS_INSTANCE_PORT': '808',
+               },
+               'Id': 'i-xxxxxxxxxxxxxxxxx',
+           },
+       ],
+       'ResponseMetadata': {
+           '...': '...',
+       },
+   }
+   ```
+
+------

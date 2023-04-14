@@ -25,7 +25,40 @@ To delete a namespace, perform the following procedure\.
 + Delete a namespace with the `[delete\-namespace](https://docs.aws.amazon.com/cli/latest/reference/servicediscovery/delete-namespace.html)` command \(replace the *red* value with your own\)\. If the namespace still contains one or more services, the request fails\.
 
   ```
-  aws servicediscovery delete-namespace --id srv-xxxxxxxx
+  aws servicediscovery delete-namespace --id ns-xxxxxxxxxxx
   ```
+
+------
+#### [ AWS SDK for Python \(Boto3\) ]
+
+1. If you don't already have `Boto3` installed, you can find instructions for installing, configuring, and using `Boto3` [here](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#installation)\.
+
+1. Import `Boto3` and use `servicediscovery` as your service\.
+
+   ```
+   import boto3
+   client = boto3.client('servicediscovery')
+   ```
+
+1. Delete a namespace with `delete_namespace()` \(replace the *red* value with your own\)\. If the namespace still contains one or more services, the request fails\.
+
+   ```
+   response = client.delete_namespace(
+       Id='ns-xxxxxxxxxxx',
+   )
+   # If you want to see the response
+   print(response)
+   ```
+
+   Example response output
+
+   ```
+   {
+       'OperationId': 'gv4g5meo7ndmeh4fqskygvk23d2fijwa-k98y6drk',
+       'ResponseMetadata': {
+           '...': '...',
+       },
+   }
+   ```
 
 ------

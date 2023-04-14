@@ -19,7 +19,7 @@ To create a service, perform the following procedure\.
 
 ------
 #### [ AWS CLI ]
-+ Create a service with the `[create\-service](https://docs.aws.amazon.com/cli/latest/reference/servicediscovery/create-service.html)` command \(replace the *red* value with your own\)\.
++ Create a service with the `[create\-service](https://docs.aws.amazon.com/cli/latest/reference/servicediscovery/create-services.html)` command \(replace the *red* value with your own\)\.
 
   ```
   aws servicediscovery create-service \
@@ -34,7 +34,7 @@ To create a service, perform the following procedure\.
   {
           "Service": {
           "Id": "srv-xxxxxxxxxxx",
-          "Arn": "arn:aws:servicediscovery:us-west-2:803642222207:service/srv-xxxxxxxxxxx",
+          "Arn": "arn:aws:servicediscovery:us-west-2:123456789012:service/srv-xxxxxxxxxxx",
           "Name": "service-name",
           "NamespaceId": "ns-xxxxxxxxxxx",
           "DnsConfig": {
@@ -52,6 +52,64 @@ To create a service, perform the following procedure\.
       }
   }
   ```
+
+------
+#### [ AWS SDK for Python \(Boto3\) ]
+
+1. If you don't already have `Boto3` installed, you can find instructions for installing, configuring, and using `Boto3` [here](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#installation)\.
+
+1. Import `Boto3` and use `servicediscovery` as your service\.
+
+   ```
+   import boto3
+   client = boto3.client('servicediscovery')
+   ```
+
+1. Create a service with `create_service()` \(replace the *red* value with your own\)\.
+
+   ```
+   response = client.create_service(
+       DnsConfig={
+           'DnsRecords': [
+               {
+                   'TTL': 60,
+                   'Type': 'A',
+               },
+           ],
+           'NamespaceId': 'ns-xxxxxxxxxxx',
+           'RoutingPolicy': 'MULTIVALUE',
+       },
+       Name='service-name',
+       NamespaceId='ns-xxxxxxxxxxx',
+   )
+   ```
+
+   Example response output
+
+   ```
+   {
+       'Service': {
+           'Arn': 'arn:aws:servicediscovery:us-west-2:123456789012:service/srv-xxxxxxxxxxx',
+           'CreateDate': 1587081768.334,
+           'DnsConfig': {
+               'DnsRecords': [
+                   {
+                       'TTL': 60,
+                       'Type': 'A',
+                   },
+               ],
+               'NamespaceId': 'ns-xxxxxxxxxxx',
+               'RoutingPolicy': 'MULTIVALUE',
+           },
+           'Id': 'srv-xxxxxxxxxxx',
+           'Name': 'service-name',
+           'NamespaceId': 'ns-xxxxxxxxxxx',
+       },
+       'ResponseMetadata': {
+           '...': '...',
+       },
+   }
+   ```
 
 ------
 

@@ -20,10 +20,10 @@ You can grant or deny resource\-level permissions for namespaces and services fo
 
 ## Understanding Resource Ownership<a name="access-control-owner"></a>
 
-An AWS account owns the resources that are created in the account, regardless of who created the resources\. Specifically, the resource owner is the AWS account of the principal entity \(that is, the root account, an IAM user, or an IAM role\) that authenticates the resource creation request\. 
+An AWS account owns the resources that are created in the account, regardless of who created the resources\. Specifically, the resource owner is the AWS account of the principal entity \(that is, the root user account, an IAM user, or an IAM role\) that authenticates the resource creation request\. 
 
 The following examples illustrate how this works:
-+ If you use the root account credentials of your AWS account to create an HTTP namespace, your AWS account is the owner of the resource\.
++ If you use the root user account credentials of your AWS account to create an HTTP namespace, your AWS account is the owner of the resource\.
 + If you create an IAM user in your AWS account and grant permissions to create an HTTP namespace to that user, the user can create an HTTP namespace\. However, your AWS account, to which the user belongs, owns the HTTP namespace resource\.
 + If you create an IAM role in your AWS account with permissions to create an HTTP namespace, anyone who can assume the role can create an HTTP namespace\. Your AWS account, to which the role belongs, owns the HTTP namespace resource\.
 
@@ -112,7 +112,7 @@ AWS Cloud Map includes API actions \(see the [AWS Cloud Map API Reference](https
 The following are the basic policy elements:
 + **Resource** – You use an Amazon Resource Name \(ARN\) to identify the resource that the policy applies to\. For more information, see [ARNs for AWS Cloud Map Resources](#access-control-resources)\.
 + **Action** – You use action keywords to identify resource actions that you want to allow or deny\. For example, depending on the specified `Effect`, the `servicediscovery:CreateHttpNamespace` permission allows or denies a user the ability to perform the AWS Cloud Map [CreateHttpNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateHttpNamespace.html) action\.
-+ **Effect** – You specify the effect, either allow or deny, when a user tries to perform the action on the specified resource\. If you don't explicitly grant access to an action, access is implicitly denied\. You can also explicitly deny access to a resource, which you might do to make sure that a user cannot access it, even if a different policy grants access\.
++ **Effect** – You specify the effect, either allow or deny, when a user tries to perform the action on the specified resource\. If you don't explicitly grant access to an action, access is implicitly denied\. You can also explicitly deny access to a resource, which you might do to make sure that a user can't access it, even if a different policy grants access\.
 + **Principal** – In identity\-based policies \(IAM policies\), the user that the policy is attached to is the implicit principal\. For resource\-based policies, you specify the user, account, service, or other entity that you want to receive permissions \(applies to resource\-based policies only\)\. AWS Cloud Map doesn't support resource\-based policies\.
 
 For more information about IAM policy syntax and descriptions, see the [IAM Policy Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.

@@ -28,3 +28,35 @@ To delete a service, perform the following procedure\.
   ```
 
 ------
+#### [ AWS SDK for Python \(Boto3\) ]
+
+1. If you don't already have `Boto3` installed, you can find instructions for installing, configuring, and using `Boto3` [here](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#installation)\.
+
+1. Import `Boto3` and use `servicediscovery` as your service\.
+
+   ```
+   import boto3
+   client = boto3.client('servicediscovery')
+   ```
+
+1. Delete a service with `delete_service()` \(replace the *red* value with your own\)\.
+
+   ```
+   response = client.delete_service(
+       Id='srv-xxxxxx',
+   )
+   # If you want to see the response
+   print(response)
+   ```
+
+   Example response output
+
+   ```
+   {
+       'ResponseMetadata': {
+           '...': '...',
+       },
+   }
+   ```
+
+------
